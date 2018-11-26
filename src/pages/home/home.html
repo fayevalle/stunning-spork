@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title class="title">
+      District V Report
+      <ion-icon name="md-camera" class="camera" (click)="takePhoto()"></ion-icon>
+    </ion-title>  
+  </ion-navbar>
+</ion-header>
+  
+<ion-content padding class="body home-background">          
+    <form #fm = "ngForm" [formGroup]="reportForm" (ngSubmit)="reportmo(fm)"> 
+       <div class="image"> 
+          <p align="center"><img name="img" [src]="myphoto"  class="img"/></p>
+       </div>
+       <ion-item>
+        <ion-label color="dark">Date :</ion-label>
+        <ion-label>{{formattedDate}}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="dark">Name : </ion-label>
+        <ion-input formControlName="fullname"></ion-input>
+      </ion-item><br>
+       <ion-item class="radiobtn">
+          <ion-label color="dark">Category</ion-label>
+            <ion-select name="category" formControlName="category" required> 
+              <ion-option value="crime">Crime</ion-option>
+              <ion-option value="missing-person">Missing Person</ion-option>
+              <ion-option value="disaster">Disaster</ion-option>
+              <ion-option value="drug-related">Drug Related</ion-option>
+              <ion-option value="other">Others</ion-option>
+            </ion-select>
+       </ion-item> 
+       <ion-item>
+          <ion-textarea color="dark" formControlName="message" rows="4" name="message" id="messageInputBox" placeholder="Send message:(if other)" ></ion-textarea>
+       </ion-item>
+          <button mat-icon-button type="submit"  class="send" icon-only ion-button>
+            <ion-icon ios="ios-send" md="md-send"></ion-icon>
+          </button>
+    </form>
+</ion-content>

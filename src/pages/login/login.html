@@ -1,0 +1,34 @@
+<ion-content class="login-content" padding>
+  <ion-row class="logo-row">
+    <ion-col></ion-col>
+    <div class="logo">
+        <img class="image" src="../../assets/imgs/qclogo.png"/>  
+    </div>  
+    <ion-col></ion-col>
+  </ion-row>
+  <div class="login-box">
+    <form [formGroup]="loginForm">
+      <ion-row>
+        <ion-col>
+          <ion-list inset>
+            <ion-item>
+              <ion-input type="text" placeholder="Name" name="name" formControlName="name" required></ion-input>
+            </ion-item>
+            
+            <ion-item>
+              <ion-input type="password" placeholder="Password" name="password" formControlName="password" required></ion-input>
+            </ion-item>
+            
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row>
+        <ion-col class="signup-col">
+          <button ion-button class="submit-btn" full type="submit" [disabled]="!loginForm.valid" (click)="toHomePage()">Login</button>
+        </ion-col>
+      </ion-row>
+      
+    </form>
+  </div>
+</ion-content>

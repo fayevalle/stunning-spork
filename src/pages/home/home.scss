@@ -1,0 +1,37 @@
+page-home {
+    .btn{
+        width: 50px;
+        background-color: transparent !important;
+        -webkit-box-shadow: none;
+    	-moz-box-shadow: none;
+	    box-shadow: none;
+    }
+    .other{
+        padding: 5px 5px 5px 5px;       
+    }
+    .send{
+        margin-top: 20px;
+        float: right;
+    }
+    .img{
+        display: block;
+        height: 250px;
+        margin-top: 0px; 
+    }
+    .radiobtn{
+        background-color: transparent !important;
+    }
+    .image{
+        height: 250px;
+        width: 325px;
+        margin-bottom: 10px;
+        background-color: gray;
+        opacity: .2;
+    }
+    .camera{
+        color: rgb(77, 143, 241);
+        background-color: transparent !important;
+        font-size: 30px;
+        float: right;
+    }
+}
